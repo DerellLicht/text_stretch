@@ -13,6 +13,9 @@
 #include <stdio.h>
 #include <errno.h>
 
+//lint -e10  Expecting '}'
+//lint -e818  Pointer parameter 'argv' (line 88) could be declared as pointing to const
+
 #define  LOOP_FOREVER   1
 
 #define  HTAB     9
@@ -39,7 +42,7 @@ void strip_newlines(char *rstr)
    while (1) {
       if (slen == 0)
          break;
-      if (*(rstr+slen-1) == '\n'  ||  *(rstr+slen-1) == '\r') {
+      if (*(rstr+slen-1) == CR  ||  *(rstr+slen-1) == LF) {
          slen-- ;
          *(rstr+slen) = 0 ;
       } else {
@@ -64,9 +67,9 @@ char *strip_leading_spaces(char *str)
 }
 
 //**********************************************************************
-void strip_duplicate_spaces(char *outpstr)
+void strip_duplicate_spaces(char *pstr)
 {
-   char *hd = outpstr ;
+   char *hd = pstr ;
    while (*hd != 0) {
       char *tl ;
       //  assume that inter-line spaces are real spaces, not tabs
