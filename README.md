@@ -11,7 +11,7 @@ text_stretch input_filename.txt
 
 output will look like this:
 
-# text_stretch test.txt  
+\> text_stretch test.txt  
 input:  test.txt  
 output: test.out  
 35 lines read from input file  
