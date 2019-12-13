@@ -6,16 +6,16 @@ instructions:
 1. put text_stretch.exe in a directory where you are going to 
    store the input and output files.
 2. copy blocks of complete paragraphs into the input text file
-3. run the program:
+3. run the program:  
 text_stretch input_filename.txt
 
 output will look like this:
 
-> text_stretch test.txt
-input:  test.txt
-output: test.out
-35 lines read from input file
-8 lines written to output file, max line length: 558 bytes
+> text_stretch test.txt  
+input:  test.txt  
+output: test.out  
+35 lines read from input file  
+8 lines written to output file, max line length: 558 bytes  
 
 4. the corrected lines will be in input_filename.out
 5. open input_filename.out in pspad
